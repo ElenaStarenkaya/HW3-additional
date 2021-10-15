@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var a = 0, b = 1, x, y, z = "", str = "", max = 0;
+
+
+        //1 Сумма чисел в диапазоне
+
+        // x = +prompt("Введите первое число диапазона.");
+        // y = +prompt("Введите последнее число диапазона.");
+        // while (x <= y) {
+        //     a += x;
+        //     x++;
+        // }
+        // alert(a);
+
+
+        //2 Наибольший общий делитель
+
+        // x = +prompt("Введите первое число.");
+        // y = +prompt("Введите второе число.");
+        // while (x != 0 && y != 0) {
+        //     if (x > y)
+        //         x = x % y;
+        //     else
+        //         y = y % x;
+        // }
+        // alert(x+y);
+        // for (i = 1; i <= x; i++)
+        //     if (x % i == 0 && y % i == 0 && i > max)
+        //         max = i;
+
+
+
+
+        //3 Все делители числа
+
+        // x = +prompt("Введите число.");
+        // for (i = 2; i < x; i++)
+        //     if (x % i == 0 && x != 1)
+        //         str += String(i) + " ";
+        // alert(str);
+
+
+        //4 Кол-во цифр в числе
+
+        // x = +prompt("Введите число.");
+        // while ((x /= 10) >= 1)
+        //     b++;
+        // alert(b);
+        // while (x >= 10) {
+        //     x /= 10;
+        //     b++;
+        // }
+        // alert(b);
+
+
+        // 5 Подсчет положит., отрицат., четных, нечетных чисел, нолей
+
+        // var pos = 0, neg = 0, zero = 0, even = 0, odd = 0;
+        // for (i = 1; i <= 10; i++) {
+        //     x = +prompt("Введите число.");
+        //     if (x > 0)
+        //         pos++;
+        //     if (x < 0)
+        //         neg++;
+        //     if (x == 0)
+        //         zero++;
+        //     if (x % 2 == 0)
+        //         even++;
+        //     if (x % 2 !== 0)
+        //         odd++;
+        // }
+        // alert("Вы ввели " + pos + " положительных чисел, " + neg + " отрицательных чисел, " + zero + " нолей, " + even + " четных чисел, " + odd + " нечетных чисел.");
+
+
+
+        //6 Зацикленный калькулятор
+
+        // do {
+        //     x = +prompt("Введите первое число.");
+        //     y = +prompt("Введите второе число.");
+        //     z = prompt("Введите знак операции.");
+        //     switch (z) {
+        //         case "+": alert(x + y); break;
+        //         case "-": alert(x - y); break;
+        //         case "*": alert(x * y); break;
+        //         case "/": alert(x / y); break;
+        //         default: alert("Error")
+        //     }
+        // }
+        // while (confirm("Хотите решить еще один пример?"));
+
+
+        //7
+
+
+
+
+
+
+        //9 Таблица умножения
+
+        // for (let j = 2; j <= 9; j++) {
+
+        //     for (let i = 1; i <= 10; i++) {
+        //         document.write(i + "*" + j + "=" + (i * j) + "<br>");
+        //     }
+
+        // }
+
+
+
+        //10 Игра "Угадай число"
+
+        var m;
+        var n = 50;
+        nmax = 100;
+        nmin = 0;
+        while (m != "=") {
+            m = prompt("Ваше число больше, меньше или равно " + n + "?");
+            switch (m) {
+                case ">": nmin = n; 
+                n = Math.round((n + nmax) / 2); break; //среднее между двумя числами = (n1+n2)/2
+                case "<": nmax = n; 
+                n = Math.round((n + nmin) / 2); break;
+                case "=": alert("Ура! Я угадал!"); break;
+                default: alert("Ошибка. Такого символа не существует.")
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
